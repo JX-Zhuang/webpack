@@ -1,0 +1,26 @@
+{
+  "name": "webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./compiler/index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JX-Zhuang/webpack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JX-Zhuang/webpack/issues"
+  },
+  "homepage": "https://github.com/JX-Zhuang/webpack#readme",
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/parser": "^7.15.7",
+    "@babel/preset-env": "^7.15.6",
+    "@babel/traverse": "^7.15.4"
+  }
+}
