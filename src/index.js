@@ -1,2 +1,3 @@
-import message from './message.js'
-console.log(message)
+import("./title").then((result) => {
+    console.log(result.default);
+});

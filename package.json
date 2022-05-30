@@ -1,11 +1,12 @@
 {
-  "name": "webpack",
+  "name": "webpack-self",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./compiler/index",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start1": "node ./compiler/index",
+    "start": "webpack serve",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -18,9 +19,37 @@
   },
   "homepage": "https://github.com/JX-Zhuang/webpack#readme",
   "devDependencies": {
-    "@babel/core": "^7.15.5",
+    "@babel/core": "^7.18.2",
     "@babel/parser": "^7.15.7",
-    "@babel/preset-env": "^7.15.6",
-    "@babel/traverse": "^7.15.4"
+    "@babel/plugin-proposal-class-properties": "^7.17.12",
+    "@babel/plugin-proposal-decorators": "^7.18.2",
+    "@babel/plugin-proposal-private-methods": "^7.17.12",
+    "@babel/plugin-proposal-private-property-in-object": "^7.17.12",
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-react": "^7.17.12",
+    "@babel/traverse": "^7.15.4",
+    "and": "0.0.3",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.5",
+    "css-loader": "^6.7.1",
+    "eslint": "^8.16.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-react-hooks": "^4.5.0",
+    "html-webpack-plugin": "^5.5.0",
+    "less": "^4.1.2",
+    "less-loader": "^11.0.0",
+    "morgan": "^1.10.0",
+    "node-sass": "^7.0.1",
+    "postcss-loader": "^7.0.0",
+    "postcss-preset-env": "^7.6.0",
+    "sass-loader": "^13.0.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.0"
   }
 }

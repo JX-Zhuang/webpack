@@ -1,0 +1,8 @@
+/* @import './bg.css'; */
+@import './less.less';
+@import './sass.scss';
+
+body {
+    /* background: url('@/1.png'); */
+    background: url('./1.png');
+}
