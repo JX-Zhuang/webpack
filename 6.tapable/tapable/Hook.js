@@ -6,6 +6,10 @@ class Hook {
         this.callAsync = CALL_ASYNC_DELEGATE;
         this.promise = PROMISE_DELEGATE;
         this._x = null;
+        this.interceptors = [];
+    }
+    intercept(interceptor) {
+        this.interceptors.push(interceptor);
     }
     tap(options, fn) {
         this._tap('sync', options, fn);
@@ -23,10 +27,47 @@ class Hook {
             };
         }
         const tapInfo = { ...options, type, fn };
+        this.runRegisterInterceptors(tapInfo);
         this._insert(tapInfo);
     }
+    runRegisterInterceptors(tapInfo) {
+        for (const interceptor of this.interceptors) {
+            if (interceptor.register) {
+                interceptor.register(tapInfo);
+            }
+        }
+    }
     _insert(tapInfo) {
-        this.taps.push(tapInfo);
+        let before;
+        if (typeof tapInfo.before === 'string') {
+            before = new Set([tapInfo.before]);
+        } else if (Array.isArray(tapInfo.before)) {
+            before = new Set(tapInfo.before);
+        }
+        let stage = 0;
+        if (typeof tapInfo.stage === 'number') {
+            stage = tapInfo.stage;
+        }
+        let i = this.taps.length;
+        while (i > 0) {
+            i--;
+            const x = this.taps[i];
+            this.taps[i + 1] = x;
+            const xStage = x.stage || 0;
+            if (before) {
+                if (before.has(x.name)) {
+                    before.delete(x.name);
+                    continue;
+                }
+                if(before.size>0){
+                    continue;
+                }
+            }
+            if (xStage > stage) continue;
+            i++;
+            break;
+        }
+        this.taps[i] = tapInfo;
     }
     compile(options) {
         throw new Error('此方法是抽象方法，需要子类实现');
@@ -35,7 +76,8 @@ class Hook {
         return this.compile({
             taps: this.taps,
             args: this.args,
-            type
+            type,
+            interceptors: this.interceptors
         });
     }
 }
