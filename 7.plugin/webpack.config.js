@@ -18,7 +18,7 @@ module.exports = {
                 url: 'https://cdn.bootcss.com/jquery/3.1.0/jquery.js'//CDN脚本
             },
             lodash: {//自动把jquery模块变成一个外部依赖模块
-                variable: '_',//不再打包，而是从window.jQuery变量上获取jquery对象
+                variable: 'lodash',//不再打包，而是从window.jQuery变量上获取jquery对象
                 url: 'https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.21/lodash.js'//CDN脚本
             }
         })
