@@ -1,6 +1,6 @@
 const path = require('path');
 function loader(cssSource) {
-    console.log('style loader')
+    console.log('style loader',cssSource)
     let script = `
     let style = document.createElement('style');
     style.innerHTML = ${JSON.stringify(cssSource)};
@@ -12,13 +12,13 @@ function loader(cssSource) {
 ///Users/jx-zhuang/code/webpack-self/5.loader/loaders/less-loader.js
 //!/Users/jx-zhuang/code/webpack-self/5.loader/src/index.less
 loader.pitch = function (remainingRequest) {
-    console.log('style patch')
-    let script = `
-    let style = document.createElement('style');
-    style.innerHTML = require(${stringifyRequest(this, '!!' + remainingRequest)});
-    document.head.appendChild(style);
-    `;
-    return script;
+    console.log('style pitch');
+    // let script = `
+    // let style = document.createElement('style');
+    // style.innerHTML = require(${stringifyRequest(this, '!!' + remainingRequest)});
+    // document.head.appendChild(style);
+    // `;
+    // return script;
 }
 //把loader和文件从绝对路径变成相对路径
 function stringifyRequest(loaderContext, request) {
