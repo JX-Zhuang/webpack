@@ -30,3 +30,4 @@ class DonePlugin {
 module.exports = DonePlugin;
 ```
 ## 优化
+* speed-measure-webpack-plugin
