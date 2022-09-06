@@ -1,0 +1,267 @@
+{
+    "hash": "4a70c99303259b64c59b",
+    "version": "5.72.1",
+    "time": 20078,
+    "builtAt": 1662432462111,
+    "publicPath": "auto",
+    "outputPath": "/Users/jx-zhuang/code/webpack-self/practice/22/dist",
+    "assetsByChunkName": {
+        "main": [
+            "main.js"
+        ]
+    },
+    "assets": [
+        {
+            "type": "asset",
+            "name": "main.js",
+            "size": 181,
+            "emitted": false,
+            "comparedForEmit": true,
+            "cached": false,
+            "info": {
+                "javascriptModule": false,
+                "size": 181
+            },
+            "chunkNames": [
+                "main"
+            ],
+            "chunkIdHints": [],
+            "auxiliaryChunkNames": [],
+            "auxiliaryChunkIdHints": [],
+            "related": {},
+            "chunks": [
+                "main"
+            ],
+            "auxiliaryChunks": [],
+            "isOverSizeLimit": false
+        }
+    ],
+    "chunks": [
+        {
+            "rendered": true,
+            "initial": true,
+            "entry": true,
+            "recorded": false,
+            "size": 14,
+            "sizes": {
+                "javascript": 14
+            },
+            "names": [
+                "main"
+            ],
+            "idHints": [],
+            "runtime": [
+                "main"
+            ],
+            "files": [
+                "main.js"
+            ],
+            "auxiliaryFiles": [],
+            "hash": "96412212a1ff6b5e4dd6",
+            "childrenByOrder": {},
+            "id": "main",
+            "siblings": [],
+            "parents": [],
+            "children": [],
+            "modules": [
+                {
+                    "type": "module",
+                    "moduleType": "javascript/auto",
+                    "layer": null,
+                    "size": 14,
+                    "sizes": {
+                        "javascript": 14
+                    },
+                    "built": true,
+                    "codeGenerated": true,
+                    "buildTimeExecuted": false,
+                    "cached": false,
+                    "identifier": "/Users/jx-zhuang/code/webpack-self/practice/22/src/index.js",
+                    "name": "./src/index.js",
+                    "nameForCondition": "/Users/jx-zhuang/code/webpack-self/practice/22/src/index.js",
+                    "index": 0,
+                    "preOrderIndex": 0,
+                    "index2": 0,
+                    "postOrderIndex": 0,
+                    "cacheable": true,
+                    "optional": false,
+                    "orphan": false,
+                    "dependent": false,
+                    "issuer": null,
+                    "issuerName": null,
+                    "issuerPath": null,
+                    "failed": false,
+                    "errors": 0,
+                    "warnings": 0,
+                    "profile": {
+                        "total": 20032,
+                        "resolving": 21,
+                        "restoring": 0,
+                        "building": 20011,
+                        "integration": 0,
+                        "storing": 0,
+                        "additionalResolving": 0,
+                        "additionalIntegration": 0,
+                        "factory": 21,
+                        "dependencies": 0
+                    },
+                    "id": "./src/index.js",
+                    "issuerId": null,
+                    "chunks": [
+                        "main"
+                    ],
+                    "assets": [],
+                    "reasons": [
+                        {
+                            "moduleIdentifier": null,
+                            "module": null,
+                            "moduleName": null,
+                            "resolvedModuleIdentifier": null,
+                            "resolvedModule": null,
+                            "type": "entry",
+                            "active": true,
+                            "explanation": "",
+                            "userRequest": "./src/index.js",
+                            "loc": "main",
+                            "moduleId": null,
+                            "resolvedModuleId": null
+                        }
+                    ],
+                    "usedExports": null,
+                    "providedExports": null,
+                    "optimizationBailout": [],
+                    "depth": 0,
+                    "fooDuration": 20000
+                }
+            ],
+            "origins": [
+                {
+                    "module": "",
+                    "moduleIdentifier": "",
+                    "moduleName": "",
+                    "loc": "main",
+                    "request": "./src/index.js"
+                }
+            ]
+        }
+    ],
+    "modules": [
+        {
+            "type": "module",
+            "moduleType": "javascript/auto",
+            "layer": null,
+            "size": 14,
+            "sizes": {
+                "javascript": 14
+            },
+            "built": true,
+            "codeGenerated": true,
+            "buildTimeExecuted": false,
+            "cached": false,
+            "identifier": "/Users/jx-zhuang/code/webpack-self/practice/22/src/index.js",
+            "name": "./src/index.js",
+            "nameForCondition": "/Users/jx-zhuang/code/webpack-self/practice/22/src/index.js",
+            "index": 0,
+            "preOrderIndex": 0,
+            "index2": 0,
+            "postOrderIndex": 0,
+            "cacheable": true,
+            "optional": false,
+            "orphan": false,
+            "issuer": null,
+            "issuerName": null,
+            "issuerPath": null,
+            "failed": false,
+            "errors": 0,
+            "warnings": 0,
+            "profile": {
+                "total": 20032,
+                "resolving": 21,
+                "restoring": 0,
+                "building": 20011,
+                "integration": 0,
+                "storing": 0,
+                "additionalResolving": 0,
+                "additionalIntegration": 0,
+                "factory": 21,
+                "dependencies": 0
+            },
+            "id": "./src/index.js",
+            "issuerId": null,
+            "chunks": [
+                "main"
+            ],
+            "assets": [],
+            "reasons": [
+                {
+                    "moduleIdentifier": null,
+                    "module": null,
+                    "moduleName": null,
+                    "resolvedModuleIdentifier": null,
+                    "resolvedModule": null,
+                    "type": "entry",
+                    "active": true,
+                    "explanation": "",
+                    "userRequest": "./src/index.js",
+                    "loc": "main",
+                    "moduleId": null,
+                    "resolvedModuleId": null
+                }
+            ],
+            "usedExports": null,
+            "providedExports": null,
+            "optimizationBailout": [],
+            "depth": 0,
+            "fooDuration": 20000
+        }
+    ],
+    "entrypoints": {
+        "main": {
+            "name": "main",
+            "chunks": [
+                "main"
+            ],
+            "assets": [
+                {
+                    "name": "main.js",
+                    "size": 181
+                }
+            ],
+            "filteredAssets": 0,
+            "assetsSize": 181,
+            "auxiliaryAssets": [],
+            "filteredAuxiliaryAssets": 0,
+            "auxiliaryAssetsSize": 0,
+            "children": {},
+            "childAssets": {},
+            "isOverSizeLimit": false
+        }
+    },
+    "namedChunkGroups": {
+        "main": {
+            "name": "main",
+            "chunks": [
+                "main"
+            ],
+            "assets": [
+                {
+                    "name": "main.js",
+                    "size": 181
+                }
+            ],
+            "filteredAssets": 0,
+            "assetsSize": 181,
+            "auxiliaryAssets": [],
+            "filteredAuxiliaryAssets": 0,
+            "auxiliaryAssetsSize": 0,
+            "children": {},
+            "childAssets": {},
+            "isOverSizeLimit": false
+        }
+    },
+    "errors": [],
+    "errorsCount": 0,
+    "warnings": [],
+    "warningsCount": 0,
+    "children": []
+}

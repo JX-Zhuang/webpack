@@ -1,0 +1,12 @@
+{
+  "name": "21",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "start": "../../node_modules/.bin/webpack serve",
+    "build": "../../node_modules/.bin/webpack"
+  },
+  "author": "",
+  "license": "ISC"
+}
