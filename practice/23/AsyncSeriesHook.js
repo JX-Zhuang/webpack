@@ -27,7 +27,12 @@ hook2.tapPromise("test", () => {
 });
 hook2.tapPromise("test", () => {
     console.log("callback B");
-    return Promise.resolve();
+    return new Promise(resolve => {
+        setTimeout(() => {
+            console.log("callback B 异步操作结束");
+            resolve();
+        }, 1000);
+    });
 });
 
 hook2.promise();
