@@ -1,8 +1,8 @@
 module.exports = {
     entry: "./src/index",
-    mode: "production",
+    mode: "development",
     devtool: false,
     optimization: {
-        // usedExports: true,
+        usedExports: true,
     },
 };

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .errorCode {
+            border: 1px solid;
+            padding: 20px;
+            margin: 20px;
+        }
+    </style>
+    <script src="https://unpkg.com/source-map@0.7.3/dist/source-map.js"></script>
+    <script>
+        var sourceMap = window.sourceMap;
+        sourceMap.SourceMapConsumer.initialize({
+            "lib/mappings.wasm": "https://unpkg.com/source-map@0.7.3/lib/mappings.wasm"
+        });
+        const createErrorContent = (codes, highLine) => {
+            const errorContent = document.createElement('div');
+            errorContent.className = 'errorCode';
+            errorContent.innerHTML = codes.map((error, index) => {
+                if (highLine === index) {
+                    return `<div style="color:red">${error}</div>`;
+                }
+                return `<div>${error}</div>`;
+            }).join('');
+            document.body.appendChild(errorContent);
+        }
+        window.addEventListener('error', (e) => {
+            const { filename, lineno, colno } = e;
+            const mapUrl = filename + '.map';
+            fetch(mapUrl).then(res => {
+                return res.text();
+            }).then(async data => {
+                const consumer = await new sourceMap.SourceMapConsumer(data);
+                const { source, line, column } = consumer.originalPositionFor({
+                    line: e.lineno,
+                    column: e.colno
+                });
+                fetch(source).then(res => res.text()).then(data => {
+                    const codes = data.split('\n');
+                    createErrorContent(codes, line - 1);
+                    // console.log(arr[line - 1], column);
+                });
+            })
+
+        });
+    </script>
+    <script defer src="main.js"></script>
+</head>
+
+<body>
+    <div id="button">
+        click me
+    </div>
+</body>
+
+</html>

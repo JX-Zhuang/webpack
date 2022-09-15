@@ -1,2 +1,7 @@
-export const bar = 'bar';
-export const foo = 'foo';
+const bar = 'bar'
+const foo = 'foo'
+
+export {
+    bar,
+    foo
+}

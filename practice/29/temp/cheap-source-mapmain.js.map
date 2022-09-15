@@ -1,0 +1,13 @@
+{
+    "version": 3,
+    "file": "main.js",
+    "mappings": ";;;;;AAAA;AACA",
+    "sources": [
+        "webpack://26/./src/index.js"
+    ],
+    "sourcesContent": [
+        "const name = 'zjx';\nconsole.log(name);"
+    ],
+    "names": [],
+    "sourceRoot": ""
+}

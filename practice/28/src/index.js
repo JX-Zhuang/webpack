@@ -1,2 +1,2 @@
-import { bar } from './commonjsBar';
+import { bar } from './bar';
 console.log(bar);
