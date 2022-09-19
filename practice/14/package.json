@@ -1,0 +1,23 @@
+{
+  "name": "14",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "antd": "^4.23.2",
+    "bootstrap": "^5.2.1",
+    "css-loader": "^6.7.1",
+    "element-ui": "^2.15.10",
+    "style-loader": "^3.3.1",
+    "tdesign-react": "^0.41.1",
+    "thread-loader": "^3.0.4",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
+}
