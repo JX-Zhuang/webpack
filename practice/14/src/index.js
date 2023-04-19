@@ -4,4 +4,5 @@
 // import 'tdesign-react/es/style/index.css';
 // import './bootstrap';
 // import "antd/lib/style/default.less";
-import 'zjx';
+// import 'zjx';
+class A{}
